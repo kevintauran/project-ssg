@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background-image: linear-gradient(
+          to right,
+          #0f2645,
+          #22344f,
+          #344359,
+          #465263,
+          #59626d
+        );
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      .course,
+      .category,
+      .tag {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 15px;
+        background-color: #fff;
+      }
+      .course h2,
+      .category h3,
+      .tag {
+        color: #d9534f;
+      }
+      .course video {
+        display: block;
+        margin: 10px 0;
+      }
+      .course a {
+        color: #337ab7;
+        text-decoration: none;
+      }
+      .course a:hover {
+        text-decoration: underline;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-right: 600px;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+      }
+      nav a:hover {
+        text-decoration: none;
+      }
+      .header-logo {
+        margin-left: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="header-logo">Logo</h1>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/courses">Courses</a>
+      </nav>
+    </header>
+
+    {{ content }}
+
+    <footer>
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </footer>
+  </body>
+</html>
