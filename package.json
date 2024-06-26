@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "concurrently": "^6.5.1",
+    "express": "^4.19.2"
+  },
+  "name": "web-ssg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:jekyll": "jekyll build --source ./testMongoDB --destination ./public",
+    "serve:jekyll": "jekyll serve --source ./testMongoDB",
+    "start:api": "node ./api/index.js",
+    "start:all": "concurrently \"npm run serve:jekyll\" \"npm run start:api\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
